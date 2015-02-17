@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright © 2015 CYBERSPACE Industries. All rights reserved.
+  Contacts: http://cyberspace.industries/
+  License: LICENSE.RUS.txt
+-->
+<addon addon_id="csiXF_rememberMe" title="(CSI/XF/MODULE) &quot;Запомнить меня&quot; по умолчанию" version_string="1.0.0" version_id="1" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases/>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications>
+    <modification template="helper_login_form" modification_key="csiXF_rememberMe_ctrlPageLoginRemember" description="Модификация шаблона &quot;helper_login_form&quot;" execution_order="10" enabled="1" action="str_replace">
+      <find><![CDATA[id="ctrl_pageLogin_remember"]]></find>
+      <replace><![CDATA[checked="checked" $0]]></replace>
+    </modification>
+    <modification template="login_bar_form" modification_key="csiXF_rememberMe_ctrlRemember" description="Модификация шаблона &quot;login_bar_form&quot;" execution_order="10" enabled="1" action="str_replace">
+      <find><![CDATA[id="ctrl_remember"]]></find>
+      <replace><![CDATA[checked="checked" $0]]></replace>
+    </modification>
+  </public_template_modifications>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
